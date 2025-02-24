@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6l24h2ixsb2k"]
+
+[ext_resource type="Script" path="res://script/menu.cs" id="1_n2y4i"]
+[ext_resource type="Texture2D" uid="uid://eefyf4kkdc5h" path="res://sprite/start.png" id="2_xqlqr"]
+[ext_resource type="Texture2D" uid="uid://cn18qfkoj0tpq" path="res://sprite/options.png" id="3_qysow"]
+[ext_resource type="Texture2D" uid="uid://bbwblgmbpgl3e" path="res://sprite/exit.png" id="4_vpdye"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n2y4i")
+
+[node name="brightness" type="CanvasModulate" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 1920.0
+offset_bottom = 680.0
+scale = Vector2(0.25, 0.25)
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="start" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_xqlqr")
+
+[node name="options" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_qysow")
+
+[node name="exit" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_vpdye")
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/start" to="." method="OnStartPressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/options" to="." method="OnOptionsPressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/exit" to="." method="OnExitPressed"]

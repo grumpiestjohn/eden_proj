@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://bscvbgsusbe6c"]
+
+[ext_resource type="Script" path="res://script/modeselect.cs" id="1_shymc"]
+[ext_resource type="Texture2D" uid="uid://d0vqrhoxvjeqb" path="res://sprite/storymode.png" id="2_0t002"]
+[ext_resource type="Texture2D" uid="uid://bdjtdno8fpm6h" path="res://sprite/customnight.png" id="3_uyjxe"]
+[ext_resource type="Texture2D" uid="uid://ddv5w07gqo8yo" path="res://sprite/endlessnight.png" id="4_b278q"]
+[ext_resource type="Texture2D" uid="uid://3agphics20lq" path="res://sprite/back.png" id="5_o0e4p"]
+[ext_resource type="Texture2D" uid="uid://dd14pbs6iir4s" path="res://sprite/extra.png" id="6_s5q2j"]
+[ext_resource type="Texture2D" uid="uid://ci2enb2ginep4" path="res://sprite/notimplemented.png" id="7_7cf27"]
+
+[node name="modeselect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shymc")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="storymode" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 22.0
+offset_right = 1080.0
+offset_bottom = 182.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_0t002")
+
+[node name="customnight" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 84.0
+offset_right = 1080.0
+offset_bottom = 244.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_uyjxe")
+
+[node name="endlessnight" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 146.0
+offset_right = 1080.0
+offset_bottom = 306.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("4_b278q")
+
+[node name="back" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 208.0
+offset_right = 575.0
+offset_bottom = 368.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("5_o0e4p")
+script = ExtResource("1_shymc")
+
+[node name="extra" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 208.0
+offset_right = 745.0
+offset_bottom = 368.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("6_s5q2j")
+
+[node name="Notimplemented" type="Sprite2D" parent="."]
+position = Vector2(240, 104)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_7cf27")
+
+[node name="Notimplemented2" type="Sprite2D" parent="."]
+position = Vector2(240, 166)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_7cf27")
+
+[connection signal="pressed" from="back" to="." method="OnExitPressed"]
