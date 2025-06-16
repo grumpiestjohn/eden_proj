@@ -1,0 +1,90 @@
+keys,en,uk
+SFX_WARNING,Warning!\nThe game relies on SFX's to be beaten.\nBe sure to make them audible!,"Увага!\nГру неможливо пройти без звукових ефектів.\nПереконайтеся, що добре їх чуєте!"
+MUSIC_VOL,Music Volume,Гучність музики
+SFX_VOL,SFX Volume,Гучність SFX
+INT_VIS_EFF,Intence Visual Effects,Сильні візуальні ефекти
+LOCAL_BUT,English,Українська
+BACK,Back,Назад
+EXIT,Exit,Вийти
+EXTRA,Extra,Екстра
+OPTIONS,Options,Опції
+START,Start,Почати
+STORY_MODE,Story Mode,Сюжетний Режим
+CUSTOM_NIGHT,Custom Night,Налаштована Ніч
+ENDLESS_NIGHT,Endless Night,Безкінечна Ніч
+NIGHT_1,Night 1,Ніч 1
+NIGHT_2,Night 2,Ніч 2
+NIGHT_3,Night 3,Ніч 3
+NIGHT_4,Night 4,Ніч 4
+NIGHT_5,Night 5,Ніч 5
+NIGHT_6,Night 6,Ніч 6
+NIGHT_7,Night 7,Ніч 7
+NIGHT1_1,"So, it really seems like time to begin.","Здається, що справді час починати."
+NIGHT1_2,"Are you sure?","Ти впевнений?"
+NIGHT1_3,"I am still worried sick about this.","Я вже ще не почуваюся впевнено щодо всього цього."
+NIGHT1_4,"Well, we have to start somewhere.","Нам треба почати з чогось."
+NIGHT1_5,"...","..."
+NIGHT1_6,"I can't really make you change your mind now.","Очевидно, що тебе вже не переконати."
+NIGHT1_7,"Exactly.","Саме так."
+NIGHT1_8,"I am ready.","Я готовий."
+NIGHT2_1,"Your voice is a bit quieter than usual.","Твій голос тихіший, ніж зазвичай."
+NIGHT2_2,"Is anything wrong?","Все в порядку?"
+NIGHT2_3,"There are a lot of things on my mind lately.","Думки дуже рояться останнім часом."
+NIGHT2_4,"Mind sharing?","Не хочеш поділитися цим?"
+NIGHT2_5,"...","..."
+NIGHT2_6,"Can we do this next time?","Можливо іншого разу?"
+NIGHT2_7,"As you wish.","Як скажеш."
+NIGHT2_8,"Just promise you’ll actually pay attention next time.","Лише пообіцяй, що справді слухатимеш наступного разу."
+NIGHT2_9,"I am worried, you know. Our safety is important.","Я переймаюся, розумієш? Наша безпека важлива."
+NIGHT2_10,"I will, sorry.","Так, звісно. Вибач."
+NIGHT3_1,"Time is running so fast.","Час минає так стрімко."
+NIGHT3_2,"I just lose track right when I seem to get a grip of it.","Ледве встигаю вхопити його, як знову втрачаю контроль."
+NIGHT3_3,"Do you feel the same?","Ти теж це помічаєш?"
+NIGHT3_4,"I am not sure.","Я не впевнений."
+NIGHT3_5,"Let’s talk about this later.","Давай обговоримо це пізніше."
+NIGHT3_6,"We must recover some more first.","Спершу, нам треба відновитися."
+NIGHT4_1,"As much as I respect your opinion,","Хоч як би я не поважав твою думку, зрозумій:"
+NIGHT4_2,"This isn’t the smartest move to do now.","Зараз це далеко не найкраще рішення."
+NIGHT4_3,"Why? I already feel better by a mile.","Чому? Я почуваюся набагато краще"
+NIGHT4_4,"The process is not this swift. It can’t be.","Цей процес не настільки моментальний. Він не може таким бути."
+NIGHT4_5,"Besides, the consequences of this sudden change might be severe.","Більш того, потенційно наслідки цих раптових змін серйозні."
+NIGHT4_6,"What is your plan, then?","То який твій план?"
+NIGHT4_7,"We’ll keep everything as is.","Залишимо все як є."
+NIGHT4_8,"You have to trust me on this.","Тобі варто довіритися мені."
+NIGHT5_1,"I am really dissatisfied with your actions lately.","Я жахливо невдоволений твоїми діями."
+NIGHT5_2,"You’re acting so out of norm.","Ти поводишся дуже незвично."
+NIGHT5_3,"How are you this careless?","Як ти можеш бути настільки безтурботним?"
+NIGHT5_4,"I am sorry.","Мені шкода."
+NIGHT5_5,"Your excuses are unneeded.","Твої відмовки нікому не потрібні."
+NIGHT5_6,"...","..."
+NIGHT5_7,"Look, this isn’t about me only, okay?","Це все не тільки про мене, розумієш?"
+NIGHT5_8,"I just can’t stand being in a place where we’re hated.","Я просто не можу терпіти перебувати в місці, де нас ненавидять."
+NIGHT5_9,"Don’t you feel the same?","Чи справді ти цього не помічаєш?"
+NIGHT5_10,"...","..."
+NIGHT6_1,"Please, not now.","Будь ласка, не зараз."
+NIGHT6_2,"I can’t.","Я не можу."
+NIGHT6_3,"I can’t pick up now.","Я не можу взяти слухавку."
+NIGHT6_4,"Why can’t I do this my way?","Чому я не можу зробити все по-своєму?"
+NIGHT6_5,"Let me be, please.","Прошу, лиши мене в спокої."
+NIGHT7_1,"How.","Чому."
+NIGHT7_2,"Why am I always the offputting one?","Як це я завжди огидний?"
+NIGHT7_3,"Maybe everyone just hates common sense.","Можливо, всі просто ненавидять здоровий глузд"
+NIGHT7_4,"Are they this ignorant to what’s going on?","Чи вони настільки невігласні щодо того, що зараз відбувається?"
+NIGHT7_5,"To who’s actually important here?","Щодо того, хто насправді важливий?"
+NIGHT7_6,"...","..."
+NIGHT7_7,"You’re truly leaving me no other choice.","Ти справді не лишаєш мені іншого вибору."
+NIGHT8_1,"As the snake continued devouring its flesh,","Як і змія продовжувала пожирати свою плоть,"
+NIGHT8_2,"Night rebirthed once again.","Ніч знову переродилася."
+NIGHT9_1,"Grief, obsession, despair, greed, guilt, rage, envy, fear, pride.","Горе, одержимість, відчай, жадібність, провина, лють, заздрість, страх, гордість."
+NIGHT9_2,"Have you felt those at least once?","Чи були в тебе такі почуття?"
+NIGHT9_3,"...","..."
+NIGHT9_4,"Of course you have.","Звісно, були."
+NIGHT9_5,"If not, would there really be anything for you to gain?","Якщо б ні, то чи мав би ти взагалі можливість отримати щось нове?"
+NIGHT9_6,"Would anything exist without those concepts?","Чи існувало б щось без них?"
+NIGHT9_7,"But it doesn’t just end there, does it?","Але це не все, правда?"
+NIGHT9_8,"Only when you listen is when you feel at peace, if only for a moment.","Тільки коли ти слухаєшся, ти можеш відчути спокій, навіть якщо лиш на одну мить."
+NIGHT9_9,"After following the call,","Після слухняного наслідування кличу,"
+NIGHT9_10,"There it is.","Ось воно."
+NIGHT9_11,"[center][color=#db6977]Bliss.[/color][/center]","[center][color=#db6977]Блаженство.[/color][/center]"
+NIGHT9_12,"We had fun.","Ми добре розважилися."
+NIGHT9_13,"See you soon.","До зустрічі."

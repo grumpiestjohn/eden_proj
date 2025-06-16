@@ -1,12 +1,184 @@
-[gd_scene load_steps=8 format=3 uid="uid://bscvbgsusbe6c"]
+[gd_scene load_steps=30 format=3 uid="uid://bscvbgsusbe6c"]
 
-[ext_resource type="Script" path="res://script/modeselect.cs" id="1_shymc"]
-[ext_resource type="Texture2D" uid="uid://d0vqrhoxvjeqb" path="res://sprite/storymode.png" id="2_0t002"]
-[ext_resource type="Texture2D" uid="uid://bdjtdno8fpm6h" path="res://sprite/customnight.png" id="3_uyjxe"]
-[ext_resource type="Texture2D" uid="uid://ddv5w07gqo8yo" path="res://sprite/endlessnight.png" id="4_b278q"]
-[ext_resource type="Texture2D" uid="uid://3agphics20lq" path="res://sprite/back.png" id="5_o0e4p"]
-[ext_resource type="Texture2D" uid="uid://dd14pbs6iir4s" path="res://sprite/extra.png" id="6_s5q2j"]
-[ext_resource type="Texture2D" uid="uid://ci2enb2ginep4" path="res://sprite/notimplemented.png" id="7_7cf27"]
+[ext_resource type="Script" path="res://script/ModeSelect.cs" id="1_shymc"]
+[ext_resource type="Texture2D" uid="uid://bdgitlkovxyg6" path="res://sprite/bg.png" id="2_nonax"]
+[ext_resource type="Texture2D" uid="uid://c8crwa43g2kwt" path="res://sprite/phoneicon.png" id="6_f2nsd"]
+[ext_resource type="Texture2D" uid="uid://jvqcegnsjj1n" path="res://sprite/inficon.png" id="6_tsk5y"]
+[ext_resource type="Texture2D" uid="uid://bqyylibpt4ctu" path="res://sprite/storyicon.png" id="6_ve2cr"]
+[ext_resource type="Theme" uid="uid://mahwb4qsnbf1" path="res://tres/default.tres" id="8_0fw61"]
+[ext_resource type="FontFile" uid="uid://cxky8ohx3gxjt" path="res://EdenScript.ttf" id="9_55lgu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fo1nu"]
+atlas = ExtResource("6_tsk5y")
+region = Rect2(0, 0, 31, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mtte"]
+atlas = ExtResource("6_tsk5y")
+region = Rect2(31, 0, 31, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5m877"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fo1nu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mtte")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofpt7"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(0, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujlei"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(20, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnq83"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(40, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykafx"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(60, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orn4v"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(80, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k47aw"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(100, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60bnp"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(60, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ym6e"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(80, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6i1k7"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(100, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e30i"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(0, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5myth"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(20, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ds2gd"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(40, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ge72"]
+atlas = ExtResource("6_f2nsd")
+region = Rect2(120, 0, 20, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slok4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofpt7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujlei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnq83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykafx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orn4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k47aw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60bnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ym6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6i1k7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6e30i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5myth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ds2gd")
+}],
+"loop": true,
+"name": &"default2",
+"speed": 4.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ge72")
+}],
+"loop": true,
+"name": &"scull",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5oke"]
+atlas = ExtResource("6_ve2cr")
+region = Rect2(0, 0, 20, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd2rx"]
+atlas = ExtResource("6_ve2cr")
+region = Rect2(20, 0, 20, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2g76d"]
+atlas = ExtResource("6_ve2cr")
+region = Rect2(20, 0, 20, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrlkn"]
+atlas = ExtResource("6_ve2cr")
+region = Rect2(0, 0, 20, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qsvft"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5oke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd2rx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2g76d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrlkn")
+}],
+"loop": true,
+"name": &"default2",
+"speed": 1.5
+}]
 
 [node name="modeselect" type="Control"]
 layout_mode = 3
@@ -17,62 +189,112 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_shymc")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("2_nonax")
+centered = false
 
-[node name="storymode" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 22.0
-offset_right = 1080.0
-offset_bottom = 182.0
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("2_0t002")
-
-[node name="customnight" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 84.0
-offset_right = 1080.0
-offset_bottom = 244.0
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("3_uyjxe")
-
-[node name="endlessnight" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 146.0
-offset_right = 1080.0
-offset_bottom = 306.0
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("4_b278q")
-
-[node name="back" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 95.0
-offset_top = 208.0
-offset_right = 575.0
-offset_bottom = 368.0
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("5_o0e4p")
-script = ExtResource("1_shymc")
-
-[node name="extra" type="TextureButton" parent="."]
+[node name="extra" type="Button" parent="."]
 layout_mode = 0
 offset_left = 265.0
 offset_top = 208.0
-offset_right = 745.0
-offset_bottom = 368.0
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("6_s5q2j")
+offset_right = 385.0
+offset_bottom = 248.0
+pivot_offset = Vector2(60, 20)
+focus_mode = 0
+theme = ExtResource("8_0fw61")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("9_55lgu")
+text = "EXTRA"
 
-[node name="Notimplemented" type="Sprite2D" parent="."]
-position = Vector2(240, 104)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("7_7cf27")
+[node name="story_mode" type="Button" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 22.0
+offset_right = 360.0
+offset_bottom = 62.0
+pivot_offset = Vector2(120, 20)
+focus_mode = 0
+theme = ExtResource("8_0fw61")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("9_55lgu")
+text = "STORY_MODE"
 
-[node name="Notimplemented2" type="Sprite2D" parent="."]
-position = Vector2(240, 166)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("7_7cf27")
+[node name="custom_night" type="Button" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 84.0
+offset_right = 360.0
+offset_bottom = 124.0
+pivot_offset = Vector2(120, 20)
+focus_mode = 0
+theme = ExtResource("8_0fw61")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("9_55lgu")
+text = "CUSTOM_NIGHT"
+text_overrun_behavior = 2
 
-[connection signal="pressed" from="back" to="." method="OnExitPressed"]
+[node name="endless_night" type="Button" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 146.0
+offset_right = 360.0
+offset_bottom = 186.0
+pivot_offset = Vector2(120, 20)
+focus_mode = 0
+theme = ExtResource("8_0fw61")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("9_55lgu")
+text = "ENDLESS_NIGHT"
+text_overrun_behavior = 2
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 208.0
+offset_right = 215.0
+offset_bottom = 248.0
+focus_mode = 0
+theme = ExtResource("8_0fw61")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("9_55lgu")
+text = "BACK"
+icon_alignment = 1
+
+[node name="inf2" type="AnimatedSprite2D" parent="."]
+position = Vector2(379, 166)
+sprite_frames = SubResource("SpriteFrames_5m877")
+autoplay = "default"
+
+[node name="inf1" type="AnimatedSprite2D" parent="."]
+position = Vector2(101, 166)
+sprite_frames = SubResource("SpriteFrames_5m877")
+autoplay = "default"
+
+[node name="phone2" type="AnimatedSprite2D" parent="."]
+position = Vector2(380, 104)
+sprite_frames = SubResource("SpriteFrames_slok4")
+animation = &"default2"
+autoplay = "default2"
+
+[node name="phone1" type="AnimatedSprite2D" parent="."]
+position = Vector2(100, 104)
+sprite_frames = SubResource("SpriteFrames_slok4")
+animation = &"default2"
+autoplay = "default"
+
+[node name="story2" type="AnimatedSprite2D" parent="."]
+position = Vector2(380, 42)
+sprite_frames = SubResource("SpriteFrames_qsvft")
+animation = &"default2"
+autoplay = "default2"
+
+[node name="story1" type="AnimatedSprite2D" parent="."]
+position = Vector2(100, 42)
+sprite_frames = SubResource("SpriteFrames_qsvft")
+animation = &"default2"
+autoplay = "default"
+frame = 1
+frame_progress = 0.0932635
+
+[connection signal="pressed" from="story_mode" to="." method="OnStoryModePressed"]
+[connection signal="pressed" from="exit" to="." method="OnExitPressed"]

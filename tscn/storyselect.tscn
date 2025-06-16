@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://ninms5winqrn"]
+
+[ext_resource type="Texture2D" uid="uid://bdgitlkovxyg6" path="res://sprite/bg.png" id="1_f76wx"]
+[ext_resource type="Script" path="res://script/StorySelect.cs" id="1_lm4ue"]
+[ext_resource type="Theme" uid="uid://mahwb4qsnbf1" path="res://tres/default.tres" id="2_cwmhr"]
+[ext_resource type="FontFile" uid="uid://cxky8ohx3gxjt" path="res://EdenScript.ttf" id="3_vsorm"]
+
+[node name="storyselect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lm4ue")
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("1_f76wx")
+centered = false
+
+[node name="right" type="Button" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 10.0
+offset_right = 405.0
+offset_bottom = 50.0
+focus_mode = 0
+theme = ExtResource("2_cwmhr")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("3_vsorm")
+text = ">"
+icon_alignment = 1
+
+[node name="left" type="Button" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 50.0
+focus_mode = 0
+theme = ExtResource("2_cwmhr")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("3_vsorm")
+text = "<"
+icon_alignment = 1
+
+[node name="nightname" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 10.0
+offset_right = 200.0
+offset_bottom = 27.0
+scale = Vector2(3, 3)
+theme = ExtResource("2_cwmhr")
+bbcode_enabled = true
+text = "[center]NIGHT_1[/center]"
+autowrap_mode = 2
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 208.0
+offset_right = 385.0
+offset_bottom = 248.0
+pivot_offset = Vector2(60, 20)
+focus_mode = 0
+theme = ExtResource("2_cwmhr")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("3_vsorm")
+text = "START"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 208.0
+offset_right = 215.0
+offset_bottom = 248.0
+focus_mode = 0
+theme = ExtResource("2_cwmhr")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("3_vsorm")
+text = "BACK"
+icon_alignment = 1
+
+[connection signal="pressed" from="right" to="." method="OnRightPressed"]
+[connection signal="pressed" from="left" to="." method="OnLeftPressed"]
+[connection signal="pressed" from="start" to="." method="OnStartPressed"]
+[connection signal="pressed" from="exit" to="." method="OnBackPressed"]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://y27l6w1fn6yc"]
+
+[ext_resource type="Material" uid="uid://c1xemfsxguvqs" path="res://tres/crt.tres" id="1_2x005"]
+[ext_resource type="Script" path="res://script/GlobalOverlay.cs" id="1_kmp8q"]
+[ext_resource type="Texture2D" uid="uid://dcx2apwojbkxv" path="res://sprite/cursor.png" id="2_p4648"]
+[ext_resource type="Texture2D" uid="uid://bdgitlkovxyg6" path="res://sprite/bg.png" id="3_s6as1"]
+
+[node name="globaloverlay" type="Node2D"]
+script = ExtResource("1_kmp8q")
+
+[node name="cursor" type="Sprite2D" parent="."]
+z_index = 128
+position = Vector2(-7, -11)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_p4648")
+
+[node name="brightness" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = ExtResource("1_2x005")
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="eyes" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+position = Vector2(240, 135)
+texture = ExtResource("3_s6as1")

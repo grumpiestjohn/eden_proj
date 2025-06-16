@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bonhs3r1l2220"]
+
+[ext_resource type="Shader" path="res://tres/glitch.gdshader" id="1_f3s3x"]
+
+[resource]
+shader = ExtResource("1_f3s3x")
+shader_parameter/chaos = 32.0
+shader_parameter/radius = 1.0
+shader_parameter/attenuation = 5.0

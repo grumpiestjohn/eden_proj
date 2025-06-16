@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://c151w6v7e6p08"]
+
+[ext_resource type="Script" path="res://script/Cutscene.cs" id="1_gbdmr"]
+[ext_resource type="Texture2D" uid="uid://bdgitlkovxyg6" path="res://sprite/bg.png" id="1_inrhl"]
+[ext_resource type="Theme" uid="uid://mahwb4qsnbf1" path="res://tres/default.tres" id="1_xv8w2"]
+
+[node name="cutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gbdmr")
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("1_inrhl")
+centered = false
+
+[node name="text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 90.0
+offset_right = 295.0
+offset_bottom = 150.0
+scale = Vector2(1.5, 1.5)
+theme = ExtResource("1_xv8w2")
+bbcode_enabled = true
+text = "PRENIGHT1_1"
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0

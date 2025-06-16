@@ -1,59 +1,66 @@
-﻿using Godot;
+using Godot;
 using System;
+using System.Reflection;
 
-public partial class scenehandle : Node
+public partial class SceneHandle : Node
 {
-    public static scenehandle Instance { get; private set; }
-    private PackedScene newscene;
-    CanvasModulate brightness;
-    Tween fadeTween;
-    Color InColor = new Color(0, 0, 0, 1);  // Fade to black
-    Color OutColor = new Color(1, 1, 1, 1); // Fade to white
-
+    public string curr_scene = "";
+    public static SceneHandle Instance { get; private set; }
     public override void _Ready()
     {
         if (Instance == null) Instance = this;
-        FadeInOut(scenename, false, 2);
+        Input.MouseMode = Input.MouseModeEnum.Hidden;
+        curr_scene = GetTree().CurrentScene.Name;
     }
-
-    public async void ChangeScene(string scenename, bool transition = true, float sec = 2)
+    public async void ChangeScene(string scenename, bool transition = true, double duration = 1)
     {
+        if (GlobalOverlay.Instance.TweenWorking == true)
+        {
+            GD.Print("Transition is in progress, no scene change");
+            return;
+        }
         if (transition)
         {
-            GD.Print("working 1");
-            FadeInOut(scenename, true, sec);  // Fade in
-            await ToSignal(fadeTween, "finished"); // Wait for fade to finish
+            GlobalOverlay.Instance.FadeInOut(true, duration);
+            await ToSignal(GlobalOverlay.Instance, "TweenFinished");
         }
-        else GetTree().ChangeSceneToFile(scenename);
-
+        GetTree().ChangeSceneToFile($"res://tscn/{scenename}.tscn");
+        if (GameProcessHandle.night_ongoing) GameProcessHandle.BlockerAttempt();
+        curr_scene = scenename;
         if (transition)
         {
-            GD.Print("working 2");
-            FadeInOut(scenename, false, sec);  // Fade out
-            await ToSignal(fadeTween, "finished"); // Wait for fade to finish
+            GlobalOverlay.Instance.FadeInOut(false, duration);
+            await ToSignal(GlobalOverlay.Instance, "TweenFinished");
         }
     }
 
-    public void FadeInOut(string scenename, bool In = true, float sec = 2)
+    public void UpdateLocalizedSprites()
     {
-        var scene = GetTree().CurrentScene;
-        if (In) brightness = scene.GetNode("brightness") as CanvasModulate;
-        else brightness = scene.GetNode("brightness") as CanvasModulate;
-        fadeTween = CreateTween();
-        fadeTween.SetTrans(Tween.TransitionType.Sine);
-        fadeTween.SetEase(Tween.EaseType.InOut);
-
-        if (In)
+        foreach (Node node in GetTree().GetNodesInGroup("localized_sprites"))
         {
-            brightness.Color = OutColor;
-            fadeTween.TweenProperty(brightness, "color", InColor, sec);
-        }
-        else
-        {
-            brightness.Color = InColor;
-            fadeTween.TweenProperty(brightness, "color", OutColor, sec);
-        }
+            string path = $"res://sprite/{TranslationServer.GetLocale()}/{node.Name}.png";
 
-        fadeTween.Play();
+            if (!ResourceLoader.Exists(path))
+            {
+                GD.PrintErr($"Missing localization sprite at: {path}");
+                continue;
+            }
+
+            Texture2D texture = ResourceLoader.Load<Texture2D>(path);
+
+            if (node is TextureButton textureButton)
+            {
+                textureButton.TextureNormal = texture;
+
+            }
+            else if (node is Sprite2D sprite)
+            {
+                sprite.Texture = texture;
+            }
+            else
+            {
+                GD.PrintErr($"Invalid node for localization: {node.GetType()}");
+            }
+        }
     }
 }

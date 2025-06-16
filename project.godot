@@ -20,9 +20,11 @@ buses/default_bus_layout="res://mus/master.tres"
 
 [autoload]
 
-SceneManager="*res://script/scenehandle.cs"
-SoundManager="*res://script/soundhandle.cs"
-SaveDataManager="*res://script/savehandle.cs"
+SaveHandle="*res://script/SaveHandle.cs"
+SceneHandle="*res://script/SceneHandle.cs"
+SoundHandle="*res://script/SoundHandle.cs"
+GlobalOverlay="*res://tscn/globaloverlay.tscn"
+GameProcessHandle="*res://script/GameProcessHandle.cs"
 
 [display]
 
@@ -32,11 +34,21 @@ window/size/mode=3
 window/size/resizable=false
 window/size/borderless=true
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://sprite/cursor.png"
 
 [dotnet]
 
-project/assembly_name="kyrsova"
+project/assembly_name="eden"
+
+[filesystem]
+
+import/blender/enabled=false
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://loc/translation.en.translation", "res://loc/translation.uk.translation")
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.027451, 0.0235294, 0.0392157, 1)

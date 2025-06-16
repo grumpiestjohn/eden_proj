@@ -1,19 +1,68 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2p7es73pxd47"]
+[gd_scene load_steps=8 format=3 uid="uid://b2p7es73pxd47"]
 
-[ext_resource type="Script" path="res://script/options.cs" id="1_bhs0v"]
-[ext_resource type="Texture2D" uid="uid://3agphics20lq" path="res://sprite/back.png" id="2_c7brm"]
-[ext_resource type="Texture2D" uid="uid://dd14pbs6iir4s" path="res://sprite/extra.png" id="3_fweki"]
+[ext_resource type="Script" path="res://script/Options.cs" id="1_lnjwo"]
+[ext_resource type="Texture2D" uid="uid://bdgitlkovxyg6" path="res://sprite/bg.png" id="2_urue7"]
+[ext_resource type="FontFile" uid="uid://cxky8ohx3gxjt" path="res://EdenScript.ttf" id="5_47emq"]
+[ext_resource type="Theme" uid="uid://mahwb4qsnbf1" path="res://tres/default.tres" id="7_j6ct1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upvrc"]
+content_margin_left = 0.0
+content_margin_top = 8.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.054902, 0.101961, 0.239216, 1)
+corner_detail = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnly5"]
+content_margin_left = 0.0
+content_margin_top = 8.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0745098, 0.145098, 0.329412, 1)
+corner_detail = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwbqs"]
+content_margin_left = 0.0
+content_margin_top = 10.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.054902, 0.101961, 0.239216, 1)
+corner_detail = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
 
 [node name="options" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bhs0v")
+script = ExtResource("1_lnjwo")
 
-[node name="brightness" type="CanvasModulate" parent="."]
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("2_urue7")
+centered = false
 
 [node name="musicslider" type="HSlider" parent="."]
 layout_mode = 2
@@ -21,6 +70,8 @@ offset_left = 150.0
 offset_top = 10.0
 offset_right = 450.0
 offset_bottom = 26.0
+focus_mode = 0
+theme = ExtResource("7_j6ct1")
 max_value = 1.0
 step = 0.01
 value = 0.5
@@ -31,73 +82,113 @@ offset_left = 150.0
 offset_top = 40.0
 offset_right = 450.0
 offset_bottom = 56.0
+focus_mode = 0
+theme = ExtResource("7_j6ct1")
 max_value = 1.0
 step = 0.01
 value = 0.5
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 25.0
-offset_top = 220.0
-offset_right = 1745.0
-offset_bottom = 380.0
-scale = Vector2(0.25, 0.25)
-theme_override_constants/separation = 760
-
-[node name="exit" type="TextureButton" parent="HBoxContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("2_c7brm")
-
-[node name="extra" type="TextureButton" parent="HBoxContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("3_fweki")
-
-[node name="warning" type="RichTextLabel" parent="."]
+[node name="warning" type="Label" parent="."]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 103.0
-offset_right = 326.0
+offset_right = 415.0
 offset_bottom = 175.0
-text = "Warning!
-The game relies on SFX's to be beaten. Be sure to make them audible!"
-scroll_active = false
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("5_47emq")
+text = "SFX_WARNING"
 
-[node name="mustext" type="RichTextLabel" parent="."]
+[node name="mustext" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_left = 18.0
-offset_top = 6.0
+offset_top = 13.0
 offset_right = 132.0
-offset_bottom = 30.0
-text = "Music Volume"
-scroll_active = false
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("5_47emq")
+text = "MUSIC_VOL"
 
-[node name="sfxtext" type="RichTextLabel" parent="."]
+[node name="sfxtext" type="Label" parent="."]
 layout_mode = 0
 offset_left = 18.0
-offset_top = 36.0
+offset_top = 41.0
 offset_right = 132.0
-offset_bottom = 60.0
-text = "SFX Volume"
-scroll_active = false
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("5_47emq")
+text = "SFX_VOL"
 
-[node name="effectstext" type="RichTextLabel" parent="."]
-layout_mode = 0
+[node name="effectstext" type="Label" parent="."]
+layout_mode = 2
 offset_left = 18.0
-offset_top = 66.0
-offset_right = 352.0
-offset_bottom = 90.0
-text = "Intence Visual Effects"
-scroll_active = false
+offset_top = 73.0
+offset_right = 125.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("5_47emq")
+text = "INT_VIS_EFF"
 
 [node name="visualeffects" type="CheckBox" parent="."]
+layout_mode = 2
+offset_left = 214.0
+offset_top = 69.0
+offset_right = 252.0
+offset_bottom = 109.0
+scale = Vector2(0.5, 0.5)
+focus_mode = 0
+theme = ExtResource("7_j6ct1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 67.0
-offset_right = 224.0
-offset_bottom = 91.0
+offset_left = 20.0
+offset_top = 220.0
+offset_right = 460.0
+offset_bottom = 260.0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="localization" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("7_j6ct1")
+theme_override_fonts/font = ExtResource("5_47emq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_upvrc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lnly5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rwbqs")
+text = "LOCAL_BUT"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 220.0
+offset_right = 140.0
+offset_bottom = 260.0
+pivot_offset = Vector2(60, 20)
+focus_mode = 0
+theme = ExtResource("7_j6ct1")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("5_47emq")
+text = "BACK"
+icon_alignment = 1
+
+[node name="extra" type="Button" parent="."]
+layout_mode = 2
+offset_left = 340.0
+offset_top = 220.0
+offset_right = 460.0
+offset_bottom = 260.0
+pivot_offset = Vector2(60, 20)
+focus_mode = 0
+theme = ExtResource("7_j6ct1")
+theme_override_colors/font_color = Color(0.054902, 0.101961, 0.239216, 1)
+theme_override_fonts/font = ExtResource("5_47emq")
+text = "EXTRA"
 
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="value_changed" from="musicslider" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="musicslider" to="." method="MusicSliderChanged"]
 [connection signal="drag_started" from="sfxslider" to="." method="SFXSliderStop"]
 [connection signal="value_changed" from="sfxslider" to="." method="SFXSliderChanged"]
-[connection signal="pressed" from="HBoxContainer2/exit" to="." method="OnExitPressed"]
+[connection signal="pressed" from="visualeffects" to="." method="CheckBoxPressed"]
+[connection signal="pressed" from="HBoxContainer/localization" to="." method="OnLocalePressed"]
+[connection signal="pressed" from="back" to="." method="OnBackPressed"]

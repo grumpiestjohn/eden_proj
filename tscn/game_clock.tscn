@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2wptmqbb3ifg"]
+
+[ext_resource type="Script" path="res://script/GameClock.cs" id="1_7qjqc"]
+[ext_resource type="Theme" uid="uid://mahwb4qsnbf1" path="res://tres/default.tres" id="2_8vtm3"]
+[ext_resource type="Texture2D" uid="uid://bdgitlkovxyg6" path="res://sprite/bg.png" id="2_p4uo3"]
+[ext_resource type="Texture2D" uid="uid://c1mgqumgs7cus" path="res://sprite/clock.png" id="4_mdi7r"]
+[ext_resource type="Texture2D" uid="uid://twms8hm3g3qs" path="res://sprite/nightstand.png" id="5_mmmip"]
+
+[node name="game_clock" type="Node2D"]
+script = ExtResource("1_7qjqc")
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("2_p4uo3")
+centered = false
+
+[node name="clock" type="Sprite2D" parent="."]
+position = Vector2(240, 98)
+texture = ExtResource("4_mdi7r")
+
+[node name="time" type="RichTextLabel" parent="."]
+offset_left = 213.0
+offset_top = 92.0
+offset_right = 269.0
+offset_bottom = 110.0
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(28, 9)
+mouse_filter = 1
+theme = ExtResource("2_8vtm3")
+bbcode_enabled = true
+autowrap_mode = 2
+
+[node name="nightstand" type="Sprite2D" parent="."]
+position = Vector2(240, 180)
+texture = ExtResource("5_mmmip")

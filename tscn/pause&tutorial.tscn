@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c8my6kopn4nsb"]
+
+[node name="pause&tutorial" type="Node2D"]
